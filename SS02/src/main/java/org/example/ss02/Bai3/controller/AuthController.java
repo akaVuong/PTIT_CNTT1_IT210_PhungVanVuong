@@ -22,8 +22,6 @@ public class AuthController {
             @RequestParam("password") String password, // Thêm ("password")
             HttpSession session,
             RedirectAttributes redirectAttributes) {
-
-        // Giữ nguyên đoạn logic admin/admin123 bên dưới của bạn...
         if (("admin".equals(username) && "admin123".equals(password)) ||
                 ("staff".equals(username) && "staff123".equals(password))) {
 

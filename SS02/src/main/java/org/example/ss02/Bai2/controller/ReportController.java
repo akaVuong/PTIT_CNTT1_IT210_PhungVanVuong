@@ -10,7 +10,6 @@ import java.util.List;
 public class ReportController {
     @RequestMapping("/report")
     public String showReport(Model model) {
-        // Giả lập dữ liệu sinh viên để hiển thị lên JSP
         List<Student> list = new ArrayList<>();
         list.add(new Student("Nguyễn Văn A", 8.5));
         list.add(new Student("Trần Thị B", 4.0));
@@ -19,11 +18,11 @@ public class ReportController {
         model.addAttribute("studentList", list);
         model.addAttribute("className", "Java Web 02");
 
-        return "report"; // Đường dẫn đến file JSP
+        return "report";
     }
 }
 
-// Class phụ để test
+
 class Student {
     private String name;
     private double score;

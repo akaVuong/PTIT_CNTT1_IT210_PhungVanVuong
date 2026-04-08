@@ -1,0 +1,25 @@
+Bài 0: Dựng khung xương dự án
+
+Bài 1: Học cách Quản lý đối tượng (Dùng @Autowired, @Service thay vì new thủ công).
+
+Bài 2: Học cách Xử lý dữ liệu linh hoạt (Lỡ khách hàng quên nhập tham số thì mình xử lý sao - defaultValue).
+
+Bài 3: Học cách Thiết kế URL chuẩn (Lấy một thứ cụ thể thì dùng PathVariable cho đẹp).
+
+Bài 4: Học cách Hiển thị giao diện thực tế (Đưa dữ liệu từ Java ra màn hình HTML cho người dùng xem).
+
+
+phân tích yêu cầu của bafi3:
+Vị trí của số 5 trong URL:
+Cách A (/bai3/orders/5): Số 5 nằm trong Path (đường dẫn) của URL. Nó đóng vai trò là một phần cấu trúc
+định danh của tài nguyên.
+Cách B (/bai3/orders?id=5): Số 5 nằm trong Query String (chuỗi truy vấn), bắt đầu sau dấu ?.
+Nó đóng vai trò là một tham số lọc hoặc truyền dữ liệu thêm cho đường dẫn.
+
+Lựa chọn: * Để lấy ID của một đối tượng cụ thể (Unique Resource), Cách A phù hợp hơn. Đây là phong cách
+thiết kế theo chuẩn RESTful API.
+
+Lý do: Cách A giúp URL trông sạch sẽ, chuyên nghiệp và thể hiện rõ cấu trúc phân cấp (Đơn hàng -> số 5).
+Cách B thường dùng khi bạn muốn lọc (ví dụ: tìm đơn hàng theo tên, theo ngày) hơn là định danh 1 cái duy nhất.
+
+Kết luận: chọn Cách A.

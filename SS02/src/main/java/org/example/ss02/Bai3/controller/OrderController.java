@@ -21,7 +21,7 @@ public class OrderController {
             return "redirect:/login";
         }
 
-        // 2. Tạo dữ liệu giả (Hardcode)
+
         List<Map<String, Object>> orders = new ArrayList<>();
         orders.add(createOrder("ORD001", "iPhone 15", 25000000.0, new Date()));
         orders.add(createOrder("ORD002", "MacBook M3", 45000000.0, new Date()));
