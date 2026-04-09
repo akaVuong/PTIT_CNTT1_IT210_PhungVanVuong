@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Hệ Thống Nhà Hàng</title>
+    <style>
+        header { background: #2c3e50; color: white; padding: 15px; text-align: center; }
+        footer { background: #f8f9fa; padding: 10px; text-align: center; border-top: 1px solid #dee2e6; margin-top: 20px; }
+        .content { min-height: 300px; padding: 20px; }
+        .error { color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+<header>
+    <h1>QUẢN LÝ NHÀ HÀNG SS05</h1>
+    <nav>
+        <a th:href="@{/bai2/dishes}" style="color: white;">Thực đơn</a> |
+        <a th:href="@{/bai5/quick-order}" style="color: white;">Đặt món nhanh</a>
+    </nav>
+</header>
+
+<div class="content">
+    <div layout:fragment="content"></div>
+</div>
+
+<footer>
+    <p>© 2026 - Bản quyền thuộc về Nhà hàng SS05</p>
+</footer>
+</body>
+</html>

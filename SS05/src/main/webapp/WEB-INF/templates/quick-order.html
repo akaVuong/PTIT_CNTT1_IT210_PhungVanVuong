@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/main-layout}">
+<head>
+    <title>Đặt món nhanh</title>
+</head>
+<body>
+
+<div layout:fragment="content">
+    <div style="border: 2px dashed #ccc; padding: 20px; border-radius: 10px;">
+        <h2 style="color: #e67e22;">Trang Đặt Món Nhanh</h2>
+
+        <div style="background: #d4edda; color: #155724; padding: 10px; margin-bottom: 15px;">
+            <strong th:text="${promo}">Thông tin khuyến mãi sẽ xuất hiện ở đây (Dành cho Designer)</strong>
+        </div>
+
+        <p>Chọn phương thức thanh toán:</p>
+        <ul>
+            <li>Thanh toán khi nhận hàng (COD)</li>
+            <li>Chuyển khoản ngân hàng</li>
+        </ul>
+
+        <button type="button" style="padding: 10px 20px; cursor: pointer;">
+            Hoàn tất đặt hàng
+        </button>
+    </div>
+
+    <p style="margin-top: 20px; font-size: 0.9em; color: #666;">
+        * Mọi tính toán về thuế và phí được xử lý bởi <strong>OrderService</strong> (Dumb View).
+    </p>
+</div>
+
+</body>
+</html>
