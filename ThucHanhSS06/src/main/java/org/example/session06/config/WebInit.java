@@ -1,4 +1,4 @@
-package org.example.ss06.config;
+package org.example.session06.config;
 
 import org.jspecify.annotations.Nullable;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
@@ -11,7 +11,7 @@ public class WebInit extends AbstractAnnotationConfigDispatcherServletInitialize
 
     @Override
     protected Class<?> @Nullable [] getServletConfigClasses() {
-        return new Class[]{AppConfig.class};
+        return new Class[]{WebConfig.class};
     }
 
     @Override
